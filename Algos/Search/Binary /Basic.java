@@ -1,1 +1,37 @@
+public class BinarySearch {
+    
+    public static int binarySearch(int[] arr, int n)
+    {
+        int low = 0, high = arr.length - 1;
+        while (low <= high)
+        {
+            int mid = low + (high - low)/2;
 
+            if(arr[mid] == n)
+               return mid;
+
+            if(arr[mid] < n)
+               low = mid + 1;
+            
+            else
+               high = mid - 1;
+        }
+
+        return -1;
+    }
+
+
+    public static void main(String Args[])
+    {
+        int arr[] = { 2, 3, 4, 10, 40 };
+        int x = 10;
+
+        int result = binarySearch(arr, x);
+
+        if (result == -1)
+            System.out.println("Element is not present in the array");
+        
+        else
+            System.out.println("Element is present in index " + result + " or the " + (result + 1) + " element.");
+    }
+}
