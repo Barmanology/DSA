@@ -1,4 +1,4 @@
-class Solution {
+class searchInsertPosition {
     public static int searchInsert(int[] nums, int target) {
         int low = 0, high = nums.length - 1;
         while (high >= low)
